@@ -1,0 +1,14 @@
+body {
+    background-image: url("assets/fly.gif");
+    background-size: cover;
+    height: 90vh;
+  }
+
+h1 {
+    font-size: 200px;
+    color: darkblue;
+}
+h1:hover{
+    color:rgb(187, 27, 59);
+
+}
