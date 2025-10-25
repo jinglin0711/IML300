@@ -1,5 +1,5 @@
 body {
-  background-image: url("assets/sky.gif");
+  background-color: whitesmoke;
   background-size: cover;
   height: 100vh;
 }
@@ -33,6 +33,7 @@ p:hover {
 h1,
 a {
   animation: coolAnimation 3s infinite;
+  /*cursor: */
 }
 
 #p1 {
