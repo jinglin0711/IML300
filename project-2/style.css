@@ -8,7 +8,7 @@
 body {
   font-family: 'levipen', Arial, sans-serif;
     font-size: 30px;
-  background-image: url(assets/Paper_Texture.png);
+  background-image: url(assets/blankpaper.png);
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -82,3 +82,23 @@ p:hover {
   top: 70%;
   right: 35%;
 }
+
+  @font-face {
+    font-family: 'Font1';
+    src: url('assets/cursive.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Font2';
+    src: url('assets/font2.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Font3';
+    src: url('assets/font3.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Font4';
+    src: url('assets/font4.ttf') format('truetype');
+  }
