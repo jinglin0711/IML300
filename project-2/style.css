@@ -1,4 +1,13 @@
+@font-face {
+  font-family: 'levipen';
+  src: url('assets/levipen.ttf') format('truetype');
+}
+
+
+  
 body {
+  font-family: 'levipen', Arial, sans-serif;
+    font-size: 30px;
   background-image: url(assets/Paper_Texture.png);
   background-size: cover;
   height: 100vh;
@@ -34,24 +43,42 @@ p:hover {
   align-items: center;
 }
 
-h1,
-a {
-  animation: coolAnimation 3s infinite;
-  /*cursor: */
+.intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 20px;
+  color: #555;
 }
 
-#p1 {
-  animation: coolAnimation 5s infinite;
+.word {
+  position: absolute;
+  font-size: 32px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-@keyframes coolAnimation {
-  0% {
-    color: red;
-  }
-  50% {
-    color: green;
-  }
-  100% {
-    color: blue;
-  }
+#exhuastion {
+  top: 20%;
+  left: 15%;
+  transform: rotate(-5deg);
+}
+
+#sweetness {
+  top: 40%;
+  right: 20%;
+  transform: rotate(5deg);
+}
+
+#silence {
+  bottom: 30%;
+  left: 30%;
+}
+
+#hugs {
+  top: 70%;
+  right: 35%;
 }

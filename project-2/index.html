@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML demo</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @font-face {
+        font-family: 'date_font';
+        src: url(assets/date_font.ttf)format('truetype');
+      }
+
+      body {
+        font-family: 'date_font', Arial, sans-serif;
+        background-image: url('assets/back2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
     <h1> Date: <a href="page-2.html">10/23/2025</a></h1>
+    <script>
+      // Get today's date
+      const today = new Date();
+      
+      // Format the date as MM/DD/YYYY
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      const year = today.getFullYear();
+      
+      const formattedDate = `${month}/${day}/${year}`;
+      
+      // Update the date in the link
+      document.getElementById('currentDate').textContent = formattedDate;
+    </script>
   </body>
 </html>
