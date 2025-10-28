@@ -5,10 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Page</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        position: relative;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/jungle.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 3s;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      body.show-jungle::before {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <div class="phrase">
-      I think my mind is like a jungle gym, sometimes I get <a href="page-2.html">stuck</a> within.
+      I think my mind is like a jungle gym, sometimes I get <a href="page-2.html" id="stuck-link">stuck</a> within.
     </div>
+
+    <script>
+      const stuckLink = document.getElementById('stuck-link');
+      
+      stuckLink.addEventListener('mouseenter', function() {
+        document.body.classList.add('show-jungle');
+      });
+      
+      stuckLink.addEventListener('mouseleave', function() {
+        document.body.classList.remove('show-jungle');
+      });
+    </script>
   </body>
 </html>
